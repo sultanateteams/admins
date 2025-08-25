@@ -184,7 +184,7 @@ const onSave = async () => {
     alert("O‘zgarishlar yuborildi ✅");
   } catch (e) {
     console.error(e);
-    errorText.value = "Saqlashda xato";
+    errorText.value = "Saqlashda xato" + e;
   }
 };
 </script>
