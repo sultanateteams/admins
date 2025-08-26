@@ -117,7 +117,7 @@ onMounted(async () => {
       "Supabase xato: " +
       (usersError?.message || staffError?.message || "no error");
   } else {
-    normalUsers.value = usersData || [];
+    normalUsers.value = usersData.filter((el) => !el.isstaff) || [];
     staffUsers.value = staffData?.map((s) => ({ ...s, is_staff: true })) || [];
   }
 
